@@ -2,10 +2,16 @@
 <pluggable type="plugin">
 	<name>Auto-Approve</name>
 	<license url="http://www.apache.org/licenses/LICENSE-2.0.html">Apache Software License 2.0</license>
-	<author url="http://habariproject.org/">Habari Community</author>
-	<version>1.0</version>
+	<author url="http://habariproject.org/">The Habari Community</author>
+	<version>1.1</version>
 	<url>http://habariproject.org/</url>
 	<description><![CDATA[Automatically approve comments that are not spam.]]></description>
 	<copyright>2009</copyright>
+	<guid>dbf559b2-62db-4364-b35d-74fc57ebc9b9</guid>
+	<help>
+		<value><![CDATA[ 
+			Any comment that has not been determined to be spam is automatically approved.
+		]]></value>
+	</help>
 </pluggable>
  

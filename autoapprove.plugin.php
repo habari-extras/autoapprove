@@ -44,7 +44,7 @@ class AutoApprove extends Plugin
 	function action_comment_insert_before ( $comment )
 	{
 		// This plugin ignores non-comments and comments already marked as spam
-		if( $comment->type == Comment::COMMENT && $comment->status != Comment::STATUS_SPAM) {
+		if( $comment->type == Comment::COMMENT && $comment->status != Comment::STATUS_SPAM ) {
 			$comment->status = Comment::STATUS_APPROVED;
 			EventLog::log( 'Comment by ' . $comment->name . ' automatically approved.', 'info', 'autoapprove', 'autoapprove' );
 		}
@@ -54,14 +54,6 @@ class AutoApprove extends Plugin
 	function set_priorities()
 	{
 	  return array( 'action_comment_insert_before' => 10 );
-	}
-
-	/*
-	* Add update beacon support
-	*/
-	function action_update_check()
-	{
-		Update::add( 'Auto-Approve', 'dbf559b2-62db-4364-b35d-74fc57ebc9b9', $this->info->version );
 	}
 
 }
